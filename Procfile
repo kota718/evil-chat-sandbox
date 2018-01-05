@@ -1,2 +1,2 @@
 server: bin/rails server
-assets: bin/rwebpack-dev-server
+assets: bin/webpack-dev-server
