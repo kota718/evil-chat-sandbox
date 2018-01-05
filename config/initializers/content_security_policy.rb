@@ -10,6 +10,10 @@ Rails.application.config.content_security_policy do |p|
   p.script_src  :self, :https
   p.style_src   :self, :https, :unsafe_inline
 
+  # TODO: webpack-dev-serverにつながるようにした。
+  #       バージョンアップで変更があるかもしれない
+  p.connect_src :self, :https, 'http://localhost:3035', 'ws://localhost:3035'
+
   # Specify URI for violation reports
   # p.report_uri "/csp-violation-report-endpoint"
 end
